@@ -19,7 +19,7 @@ class Game:
         self.fps = 60
         self.screen = pg.display.set_mode((config.WIDTH, config.HEIGHT), pg.RESIZABLE)
         pg.display.set_caption('Aim Trainer')
-        pg.display.set_icon(pg.image.load('aimtrainer.png'))
+        pg.display.set_icon(pg.image.load('icon.png'))
 
         self.blocks = [PopupBlock(self.screen)]
         self.clock = pg.time.Clock()

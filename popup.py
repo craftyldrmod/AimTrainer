@@ -15,7 +15,7 @@ class PopupBlock:
     def __init__(self, screen:pg.display) -> None:
         self.size = Size(32, 32)
         self.pos = Position(256, 256)
-        self.color = Color(0, 255, 0)
+        self.color = Color(0, 0, 255)
         self.placed = False
         self.screen = screen
 

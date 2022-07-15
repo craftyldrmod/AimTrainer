@@ -2,6 +2,7 @@ import json
 import pygame as pg
 
 from typeObjects.size import Size
+from typeObjects.color import Color
 
 
 
@@ -21,6 +22,12 @@ class Config:
             config = json.load(_config)
 
             return Size(config['window']['width'], config['window']['height'])
+
+    def getBackgroundColor() -> Color:
+        with open('./config.json', 'r') as _config:
+            config = json.load(_config)
+
+            return Color(*config['window']['background_color'])
 
     def getRandSize() -> bool:
         with open('./config.json', 'r') as _config:

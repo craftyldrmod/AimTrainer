@@ -1,9 +1,10 @@
 {
     "window": {
         "width": 1024,
-        "height": 960
+        "height": 960,
+        "background_color": [0, 0, 0]
     },
-    "random_size": true,
+    "random_size": false,
     "random_size_range": {
         "x": [16, 64],
         "y": [16, 64]

@@ -19,7 +19,6 @@ class PopupObject:
         self.placed = False
         self.screen = screen
         self.texture = pg.transform.scale(Config.getTexture(self.name), self.size.toList())
-        print(type(self.texture))
 
 
     def move(self):

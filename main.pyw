@@ -7,10 +7,6 @@ from utils.scores import Scores
 
 
 
-bgColor = (0, 0, 0)
-CUBE_SIZE = 32
-
-
 
 class Game:
     def __init__(self) -> None:
@@ -73,7 +69,7 @@ class Game:
             
             self.time += 1
 
-            self.screen.fill(bgColor)
+            self.screen.fill(Config.getBackgroundColor().toList())
             self.render()
 
             pg.display.update()

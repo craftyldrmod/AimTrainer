@@ -2,6 +2,7 @@ import pygame as pg
 
 from popup import PopupBlock
 import config
+from utils.scores import Scores
 
 
 
@@ -65,6 +66,7 @@ class Game:
                         self.missed += 1
 
                 if event.type == pg.QUIT:
+                    Scores.save(self.clicked, self.missed, round(self.time/60))
                     pg.quit()
                     exit()
             

@@ -22,4 +22,16 @@ class Config:
 
             return Size(config['window']['width'], config['window']['height'])
 
+    def getRandSize() -> bool:
+        with open('./config.json', 'r') as _config:
+            config = json.load(_config)
+
+            return config['random_size']
+
+    def getRandSizeRange() -> dict[str:list, str:list]:
+        with open('./config.json', 'r') as _config:
+            config = json.load(_config)
+
+            return config['random_size_range']
+
 

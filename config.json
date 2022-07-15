@@ -1,0 +1,15 @@
+{
+    "window": {
+        "width": 1024,
+        "height": 960
+    },
+    "random_size": true,
+    "random_size_range": {
+        "x": [16, 64],
+        "y": [16, 64]
+    },
+    "textures_path": "./textures/",
+    "texture_map": {
+        "popup": "curvedSquare.png"
+    }
+}

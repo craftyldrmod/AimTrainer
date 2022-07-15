@@ -27,15 +27,17 @@ class PopupObject:
         self.pos.y = random.randint(0, self.windowSize.height-self.size.height)
 
     def randSize(self):
-        self.size.height = random.randint(16, 32)
-        self.size.width = random.randint(16, 32)
+        self.size.height = random.randint(*Config.getRandSizeRange()['x'])
+        self.size.width = random.randint(*Config.getRandSizeRange()['y'])
         self.texture = pg.transform.scale(Config.getTexture(self.name), self.size.toList())
 
 
     def render(self):
         if not self.placed:
+            if Config.getRandSize():
+                self.randSize()
+
             self.move()
-            self.randSize()
             self.placed = True
         
         self.screen.blit(self.texture, self.pos.toList())
